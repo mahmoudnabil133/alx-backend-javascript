@@ -1,9 +1,9 @@
 export default class Building {
   constructor(sqft) {
-    if (this.constructor !== Building){
-      const protos = Object.getOwnPropertyNames(this.constructor.prototype)
-      if (!protos.find(el=> el === 'evacuationWarningMessage')){
-        throw new Error('Class extending Building must override evacuationWarningMessage')
+    if (this.constructor !== Building) {
+      const protos = Object.getOwnPropertyNames(this.constructor.prototype);
+      if (!protos.find((el) => el === 'evacuationWarningMessage')) {
+        throw new Error('Class extending Building must override evacuationWarningMessage');
       }
     }
     this.sqft = sqft;
@@ -18,8 +18,5 @@ export default class Building {
       throw new TypeError('sqft must be a number');
     }
     this._sqft = sqft;
-  }
-  evacuationWarningMessage(){
-
   }
 }
