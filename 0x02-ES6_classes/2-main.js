@@ -9,12 +9,12 @@ try {
     c1.name = 12;
 } 
 catch(err) {
-    console.log(err.message);
+    console.log(err);
 }
 
 try {
-    const c2 = new HolbertonCourse("ES6", 3, [3, "Jane"]);
+    const c2 = new HolbertonCourse("ES6", "3", [3, "Jane"]);
 }
 catch(err) {
-    console.log(err.message);
+    console.log(err);
 }
