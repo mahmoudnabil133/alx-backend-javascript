@@ -1,8 +1,8 @@
 export default function getStudentsByLocation(students, location) {
-  let selected_students = []
-  if (!(students instanceof Array)){
-    return selected_students; 
+  let selectedStudents = [];
+  if (!(students instanceof Array)) {
+    return selectedStudents;
   }
-  selected_students = students.filter(st=> st.location === location);
-  return selected_students;
+  selectedStudents = students.filter((st) => st.location === location);
+  return selectedStudents;
 }

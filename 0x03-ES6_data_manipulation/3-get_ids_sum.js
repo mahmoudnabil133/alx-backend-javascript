@@ -3,8 +3,7 @@ export default function getStudentIdsSum(students) {
   if (!(students instanceof Array)) {
     return sum;
   }
-  sum = students.reduce((tot, st)=> tot + st.id, 0);
-  console.log(sum)
+  sum = students.reduce((tot, st) => tot + st.id, 0);
+  console.log(sum);
   return sum;
-
 }
