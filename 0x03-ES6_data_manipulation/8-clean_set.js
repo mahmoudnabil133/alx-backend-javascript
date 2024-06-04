@@ -1,4 +1,4 @@
-function cleanSet(set, start) {
+export function cleanSet(set, start) {
     if (!(set instanceof Set)) {
       throw new TypeError('set should be instance of Set');
     }
@@ -19,6 +19,3 @@ function cleanSet(set, start) {
     }
     return ret
   }
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
-  
