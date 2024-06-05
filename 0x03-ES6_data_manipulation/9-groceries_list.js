@@ -11,4 +11,4 @@ const groceriesList = () => {
 };
 
 // console.log(groceriesList());
-export default groceriesList
+export default groceriesList;
