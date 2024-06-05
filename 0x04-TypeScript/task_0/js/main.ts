@@ -43,7 +43,7 @@ thead.append(th2);
 table.append(thead);
 
 
-studentList.forEach((student) => {
+students.forEach((student) => {
   const row: HTMLTableRowElement = document.createElement('tr');
 
   const column1: HTMLTableCellElement = document.createElement('td');
