@@ -10,5 +10,5 @@ const groceriesList = () => {
   return map;
 };
 
-console.log(groceriesList());
-// export default groceriesList
+// console.log(groceriesList());
+export default groceriesList
