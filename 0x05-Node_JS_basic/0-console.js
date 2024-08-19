@@ -1,5 +1,3 @@
 #!/usr/bin/env node
-const hello = (msg) => {
-  console.log(msg);
-};
-module.exports = hello;
+const displayMessage = (message) => console.log(message);
+module.exports = displayMessage;
