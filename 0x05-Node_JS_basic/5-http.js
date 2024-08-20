@@ -41,16 +41,16 @@ const sendResponse = (res, statusCode, data) => {
 
 const app = http.createServer(async (req, res) => {
   if (req.url === '/') {
-    const msg = 'Hello Holberton School!\n';
+    const msg = 'Hello Holberton School!';
     sendResponse(res, 200, msg);
   }
   if (req.url === '/students') {
     try {
       const studetsData = await countStudents(process.argv[2]);
-      const msg = `This is the list of our students\n${studetsData}\n`;
+      const msg = `This is the list of our students\n${studetsData}`;
       sendResponse(res, 200, msg);
     } catch (err) {
-      const msg = `This is the list of our students\n${err.message}\n`;
+      const msg = `This is the list of our students\n${err.message}`;
       sendResponse(res, 500, msg);
     }
   }
