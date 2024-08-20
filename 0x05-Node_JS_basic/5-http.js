@@ -19,8 +19,8 @@ const countStudents = (path) => new Promise((resolve, reject) => {
       }
       fields[st[3]].push(st[0]);
     }
-    console.log(`Number of students: ${Count}`);
     let stData = [];
+    stData.push(`Number of students: ${Count}`);
     for (const k in fields) {
       if (Object.prototype.hasOwnProperty.call(fields, k)) { // This is the safer way to check
         const names = fields[k];
