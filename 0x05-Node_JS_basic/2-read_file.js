@@ -5,9 +5,12 @@ const countStudents = (path) => {
     const csvData = fs.readFileSync(path, 'utf8');
     const lines = csvData.split('\n');
     const Count = lines.length - 1;
-    const fields = { CS: [], SWE: [] };
+    const fields = {};
     for (let i = 1; i < lines.length; i += 1) {
       const st = lines[i].split(',');
+      if (!fields[st[3]]) {
+        fields[st[3]] = [];
+      }
       fields[st[3]].push(st[0]);
     }
     console.log(`Number of students: ${Count}`);
