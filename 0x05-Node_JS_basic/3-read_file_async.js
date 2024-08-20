@@ -1,9 +1,12 @@
 const fs = require('fs');
 
-const countStudents = (path) => {
-  try {
-    const csvData = fs.readFileSync(path, 'utf8');
-    const lines = csvData.split('\n').filter((line) => line.trim() !== '');
+const countStudents = (path) => new Promise((resolve, reject) => {
+  fs.readFile(path, 'utf8', (err, data) => {
+    if (err) {
+      reject(new Error('Cannot load the database'));
+      return;
+    }
+    const lines = data.split('\n').filter((line) => line.trim() !== '');
     const Count = lines.length - 1;
     const fields = {};
     for (let i = 1; i < lines.length; i += 1) {
@@ -22,9 +25,8 @@ const countStudents = (path) => {
         }
       }
     }
-  } catch (err) {
-    throw new Error('Cannot load the database');
-  }
-};
+    resolve();
+  });
+});
 
 module.exports = countStudents;
