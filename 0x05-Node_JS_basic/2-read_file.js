@@ -3,7 +3,7 @@ const fs = require('fs');
 const countStudents = (path) => {
   try {
     const csvData = fs.readFileSync(path, 'utf8');
-    const lines = csvData.split('\n');
+    const lines = csvData.split('\n').filter(line => line.trim() !== '');
     const Count = lines.length - 1;
     const fields = {};
     for (let i = 1; i < lines.length; i += 1) {
