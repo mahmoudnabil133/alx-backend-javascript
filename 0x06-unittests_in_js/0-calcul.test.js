@@ -40,7 +40,6 @@ describe('calculateNumber', function () {
     it('should return 6 when adding 2.4+3.6', ()=>{
       assert.equal(calculateNumber(2.4, 3.6), 6);
     });
-    // Add more tests to cover all cases dont use 6 tests
     it('should return 7 when adding 2.5+3.6', ()=>{
       assert.equal(calculateNumber(2.5, 3.6), 7);
     });
