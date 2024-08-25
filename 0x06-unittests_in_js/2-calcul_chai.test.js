@@ -51,11 +51,11 @@ describe('calculateNumber', function () {
         expect(result).to.equal(0.25);
     });
     it('1.5 / .1 = Error', ()=>{
-        const result = calculateNumber('DIVIDE', 1.5, 3.7);
+        const result = calculateNumber('DIVIDE', 1.5, .1);
         expect(result).to.equal('Error');
     });
     it('100 / .4 = Error', ()=>{
-        const result = calculateNumber('DIVIDE', 1.5, 3.7);
+        const result = calculateNumber('DIVIDE', 1.5, .4);
         expect(result).to.equal('Error');
     });
 })
