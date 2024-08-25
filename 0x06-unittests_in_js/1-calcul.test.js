@@ -63,5 +63,11 @@ describe('calculateNumber', function () {
     it('1.2 / 3.7 = 0.25', ()=>{
         assert.equal(calculateNumber('DIVIDE', 1.2, 3.7), 0.25);
     });
+    it('1.2 / .3 = 0.25', ()=>{
+        assert.equal(calculateNumber('DIVIDE', 1.2, .3), 'Error');
+    });
+    it('100 / .2 = 0.25', ()=>{
+        assert.equal(calculateNumber('DIVIDE', 100, .2), 'Error');
+    });
 
 })
